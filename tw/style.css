@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: averta;
+    src: url("./font/AvertaDemo-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: avertait;
+    src: url("./font/AvertaDemo-ExtraBoldItalic.otf") format("opentype");
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: -webkit-linear-gradient(top, #00b9ff 0%, #36c9ff 100%);
+    background-image: -o-linear-gradient(top, #00b9ff 0%, #36c9ff 100%);
+    background-image: linear-gradient(to bottom, #00b9ff 0%, #36c9ff 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00b9ff', endColorstr='#ff36c9ff', GradientType=0);
+}
+section{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+map{
+    position: absolute;
+    bottom:0;
+    min-width:70vw;
+    min-height:70vh;
+    overflow: hidden;
+    background: url(./images/map.png) no-repeat transparent;
+    background-size: contain;
+}
+center{
+    position: absolute;
+    top:5vh;
+    display:flex;
+    flex-direction: column;
+}
+flag {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url(./images/flag.png) no-repeat transparent;
+    background-size: 230%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    position: absolute;
+    top: -100px;
+    opacity: 0;
+    transition: 0.5s all ease-out;
+}
+flag.active{
+    transition: 1s all ease-in;
+    opacity: 1;
+}
+flag.indo {
+    left: 67vw;
+}
+flag.active.indo{
+    top: 60vh;
+}
+flag.china {
+    left: 66vw;
+}
+flag.active.china{
+    top: 44vh;
+}
+flag.canada {
+    left: 30vw;
+}
+flag.active.canada{
+    top: 34vh;
+}
+
+pre{
+    position: absolute;
+    top: 16vh;
+    width: 40%;
+    color: #38527f;
+    text-align: center;
+    font-size: 12px;
+    font-family: avertait,sans-serif;
+    opacity: 0;
+    transition: 0.5s all ease-in;
+}
+pre.active{
+    transition: 1s all ease-in;
+    opacity: 1;
+}
